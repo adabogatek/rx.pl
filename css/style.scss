@@ -1,0 +1,3280 @@
+/********************************/
+/*  Created by Mariusz Galka    */
+/*  Copyright by Galka Studio   */
+/*  Update by dominikserafin.pl */
+/********************************/
+
+/*---[ reset ]-----------------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---[ fonts ]-----------------------------------------------------------------------*/
+@font-face {
+	font-family: 'FrancoisOneRegular';
+	src: url('fonts/francoisone-webfont.eot');
+	src: url('fonts/francoisone-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/francoisone-webfont.woff') format('woff'), url('fonts/francoisone-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+	font-family: 'OpenSansSemiBold';
+	src: url('fonts/OpenSans-Semibold-webfont.eot');
+	src: url('fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-Semibold-webfont.woff') format('woff'), url('fonts/OpenSans-Semibold-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+	font-family: 'OpenSansRegular';
+	src: url('fonts/OpenSans-Regular-webfont.eot');
+	src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/OpenSans-Regular-webfont.woff') format('woff'), url('fonts/OpenSans-Regular-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+	font-family: 'RockSaltRegular';
+	src: url('fonts/rocksalt-webfont.eot');
+	src: url('fonts/rocksalt-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/rocksalt-webfont.woff') format('woff'), url('fonts/rocksalt-webfont.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'icons';
+	src: url('fonts/icons.eot?');
+	src: url('fonts/icons.eot?#iefix') format('embedded-opentype'), url('fonts/icons.woff') format('woff'), url('fonts/icons.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="ico"], [class*=" ico"] {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icoSearch:before {
+	content: "\f002";
+}
+.icoLock:before {
+	content: "\f023";
+}
+.icoBars:before {
+	content: "\f0c9";
+}
+/*---[ main ]-----------------------------------------------------------------------*/
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	line-height: 143%;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	background: #fff;
+}
+a {
+	color: #9b9b9b;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-transition: color 0.2s ease-out;
+	transition: color 0.2s ease-out;
+}
+a:hover {
+	color: #ffcc00;
+}
+p {
+	margin: 0 0 15px;
+}
+button {
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	border: 0 none;
+	background: none;
+	overflow: visible;
+}
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+input[type='text'], input[type='password'], input[type='file'], select, textarea {
+	padding: 6px 10px;
+	margin: 0;
+	vertical-align: top;
+	color: #383838;
+	font-size: 14px;
+	font-family: 'OpenSansSemiBold';
+	border: 1px solid #a0a0a0;
+	background: #fff;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #000;
+	opacity: .3;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #000;
+	opacity: .3;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #000;
+	opacity: .3;
+}
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #000;
+	opacity: .3;
+}
+::selection {
+	background: #ffcc00;
+	color: #fff;
+}
+::-moz-selection {
+	background: #ffcc00;
+	color: #fff;
+}
+ol {
+	list-style: decimal;
+	margin: 0 0 15px 30px;
+}
+ol li {
+	margin: 0 0 10px;
+}
+ol li ol {
+	list-style: lower-alpha;
+}
+ul {
+	margin: 0 0 15px 10px;	
+}
+ul li {
+	margin: 0 0 10px;
+	padding: 0 0 0 15px;
+	background: transparent url('../images/ico-point.png') no-repeat 0 8px;
+}
+ul li ul,
+ol li ul {
+	margin: 10px 0 0 10px;
+}
+ol li ol,
+ul li ol {
+	margin: 10px 0 0 30px;
+}
+ul li ul li {
+	background: transparent url('../images/ico-point-small.png') no-repeat 0 9px;
+	padding: 0 0 0 10px;
+}
+hr {
+	background: #e3e6e6;
+	border: 0 none;
+	font-size: 0;
+	height: 1px;
+	line-height: 0;
+	margin: 25px 0;
+}
+sup, sub {
+	font-size: 72%;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+table {
+	margin: 15px auto;
+}
+table th, table td {
+	padding: 10px 5px;
+	line-height: 140%;
+	vertical-align: top;
+	text-align: center;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+table th {
+	font-family: 'OpenSansRegular';
+	font-size: 13px;
+	font-weight: normal;
+	color: #fff;
+	background: #383838;
+}
+table td {
+	font-size: 12px;
+}
+table tr:nth-child(odd) td {
+	background: #fff;
+}
+table tr:nth-child(even) td {
+	background: #f7f7f7;
+}
+h1, h2, h3, h4, h5, h6 {
+	line-height: 105%;
+	font-weight: normal;
+}
+h1, .h1 {
+	font-size: 34px;
+	font-family: 'OpenSansSemiBold';
+	margin: 0 0 10px;
+	color: #383838;
+	letter-spacing: -0.05em;
+}
+h2, .h2 {
+	font-size: 16px;
+	font-family: 'OpenSansRegular';
+	margin: 0 0 10px;
+	color: #383838;
+}
+h3, .h3 {
+	font-size: 15px;
+	font-family: 'OpenSansRegular';
+	margin: 0 0 10px;
+	color: #343434;
+}
+h4, .h4 {
+	font-size: 14px;
+	font-family: 'OpenSansRegular';
+	margin: 0 0 5px;
+}
+h5, .h5 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 5px;
+}
+h6, .h6 {
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 5px;
+}
+small {
+	font-size: 72%;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+/*---[ clearfix ]-----------------------------------------------------------------------*/
+.cf:before,
+.cf:after {
+    content: '';
+    display: table;
+    line-height: 0;
+}
+.cf:after {
+    clear: both;
+}
+/*---[ global ]-----------------------------------------------------------------------*/
+.imgRight {
+	float: right;
+	overflow: hidden;
+	margin: 0 0 10px 20px;
+}
+.imgLeft {
+	float: left;
+	overflow: hidden;
+	margin: 0 20px 10px 0;
+}
+.imgRight figcaption, .imgLeft figcaption {
+	display: block;
+	margin: 7px 0 0;
+	text-align: center;
+}
+.img img,
+.imgRight img,
+.imgLeft img {
+	display: block;
+	width: 100%;
+	height: auto;
+	-webkit-transition: opacity 0.2s ease-out;
+	transition: opacity 0.2s ease-out;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.img a:hover img,
+.imgRight a:hover img,
+.imgLeft a:hover img {
+	opacity: .7;
+}
+.imgInText {
+	margin: 0 0 15px;
+}
+.toLeft {
+	float: left;
+}
+.toRight {
+	float: right;
+}
+.txtCenter {
+	text-align: center;
+}
+.txtRight {
+	text-align: right;
+}
+.noMargin {
+	margin: 0;
+}
+.cmt {
+	margin-top: 0;
+}
+/*---[ buttons ]-----------------------------------------------------------------------*/
+.btn {
+	display: inline-block;
+	color: #fff;
+	background: #ffcc00;
+	font-family: 'OpenSansSemiBold';
+	font-size: 14px;
+	font-weight: normal;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	padding: 0 20px;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+.btn:hover,
+button.btn:hover {
+	color: #fff;
+	background: #383838;
+}
+/*---[ grid ]-----------------------------------------------------------------------*/
+.row:before,
+.row:after {
+	display: table;
+	content: '';
+	line-height: 0;
+}
+.row:after {
+	clear: both;
+}
+.col1,
+.col2,
+.col3,
+.col4,
+.col5,
+.col6,
+.col7,
+.col8,
+.col9,
+.col10,
+.col11,
+.col12 {
+	float: left;
+	padding: 0 10px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.col1 { width: 8.33333%; }
+.col2 { width: 16.66667%; }
+.col3 { width: 25%; }
+.col4 { width: 33%; }
+.col5 { width: 41.66665%; }
+.col6 { width: 50%; }
+.col7 { width: 58.33333%; }
+.col8 { width: 66.66666%; }
+.col9 { width: 75%; }
+.col10 { width: 83.33333%; }
+.col11 { width: 91.66666%; }
+.col12 { width: 100%; }
+
+/*---[ wrapper ]-----------------------------------------------------------------------*/
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+.container:before,
+.container:after {
+	display: table;
+	content: '';
+	line-height: 0;
+}
+.container:after {
+	clear: both;
+}
+.sidebar {
+	width: 212px;
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.main {
+	width: 700px;
+	float: right;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*---[ top ]-----------------------------------------------------------------------*/
+#top {
+	background: #fff url('../images/bg-top.png') no-repeat right 47px;
+	position: relative;
+}
+#topNav {
+	border-bottom: 1px solid #e7e7e7;
+	font-family: Verdana;
+	font-size: 10px;
+	color: #383838;
+	text-transform: uppercase;
+	padding: 6px 0 5px;
+}
+#topNav ul {
+	float: left;
+	margin: 0;
+}
+#topNav ul li {
+	float: left;
+	padding: 0;
+	margin: 0 0 0 15px;
+	background: none;
+}
+#topNav ul li:first-child {
+	margin: 0;
+}
+#topNav .userBox {
+	float: right;
+}
+#topNav .userBox a {
+	margin: 0 0 0 5px;
+}
+#logo {
+	float: left;
+	position: relative;
+	margin: 18px 0 26px;
+}
+#logo img {
+	display: block;
+}
+#rwd {
+	display: none;
+	float: right;
+	color: #383838;
+	cursor: pointer;
+	font-size: 35px;
+	margin: 24px 0 0 0;
+	position: relative;
+	z-index: 999;
+	text-align: center;
+}
+#rwd span {
+	margin: 0 0 0 15px;
+}
+#menu {
+	clear: both;
+	height: 44px;
+	margin: 0 0 7px;
+	background: #383838 url('../images/bg-menu.png') no-repeat right 50%;
+}
+#menu > ul {
+	margin: 0;
+}
+#menu > ul > li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	background: none;
+	position: relative;
+}
+#menu > ul > li > a {
+	display: block;
+	color: #fff;
+	height: 44px;
+	line-height: 44px;
+	font-family: 'OpenSansSemiBold';
+	padding: 0 12px;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+#menu > ul > li > a:hover,
+#menu > ul > li > a.active {
+	background: #ffcc00;
+	color: #383838;
+}
+#menuSub {
+	clear: both;
+	margin: 0 0 20px;
+}
+#menuSub ul {
+	margin: 0;
+}
+#menuSub ul li {
+	float: left;
+	margin: 0 0 0 15px;
+	padding: 0;
+	background: none;
+}
+#menuSub ul li:first-child {
+	margin: 0;
+}
+#menuSub ul li a {
+	color: #323a3f;
+	font-size: 12px;
+	text-transform: uppercase;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+#menuSub ul li a:hover {
+	color: #9b9b9b;
+}
+#menuSub ul li img {
+	vertical-align: middle;
+}
+/*---[ advert ]-----------------------------------------------------------------------*/
+.esculapAd {
+	margin: 0 0 20px;
+	text-align: center;
+}
+.esculapAd img {
+	max-width: 100%;
+}
+/*---[ article boxes ]-----------------------------------------------------------------------*/
+.smallH1 {
+	font-size: 24px;
+	margin: 0 0 20px;
+}
+.heading {
+	padding: 0 160px 0 0;
+}
+.heading h1 {
+	font-family: 'FrancoisOneRegular';
+	font-size: 24px;
+	line-height: 100%;
+	margin: 0 0 14px
+}
+.back,
+.details {
+	margin: 0 0 35px;
+}
+.back a,
+.details a {
+	display: inline-block;
+	color: #fff;
+	background: #383838;
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	font-weight: normal;
+	height: 29px;
+	line-height: 29px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	padding: 0 10px;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+.back a span {
+	background: transparent url('../images/ico-arrow-white.png') no-repeat 0 50%;
+	padding: 0 0 0 17px;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+.back a:hover span {
+	padding: 0 0 0 12px;
+}
+.details a span {
+	background: transparent url('../images/ico-arrow-white2.png') no-repeat right 50%;
+	padding: 0 17px 0 0;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+.details a:hover span {
+	padding: 0 12px 0 0;
+}
+a.btnMore {
+	color: #383838;
+	font-family: 'Verdana';
+	font-size: 72%;
+	line-height: 150%;
+	text-transform: uppercase;
+}
+a.btnMore:hover {
+	color: #717070;
+}
+.wh {
+	position: relative;
+}
+.wh a.btnMore {
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+.itemMetaData {
+	display: block;
+	font-family: 'Verdana';
+	font-size: 72%;
+	line-height: 150%;
+	text-transform: uppercase;
+	color: #9b9b9b;
+}
+.square {
+	position: relative;
+	padding: 0 0 0 17px;
+}
+.square:before {
+	content: '';
+	width: 8px;
+	height: 8px;
+	background: #ffcc00;
+	position: absolute;
+	top: 4px;
+	left: 0;
+}
+.itemImgTxt {
+	margin: 0 0 30px;
+}
+.itemImgTxt:before,
+.itemImgTxt:after {
+	display: table;
+	content: '';
+	line-height: 0;
+}
+.itemImgTxt:after {
+	clear: both;
+}
+.itemImgTxt .img {
+	float: left;
+	margin: 4px 0 0;
+}
+.itemImgTxt .inner {
+	padding: 0 0 0 130px;
+}
+.itemImgTxt .innerVideo {
+	padding: 0 0 0 240px;
+}
+.itemImgTxt h2 {
+	line-height: 125%;
+}
+.itemImgTxt p {
+	margin: 0;
+}
+.itemImgTxt .itemMetaData.square {
+	margin: 0 0 10px;
+}
+ul.itemList {
+	margin: 0 0 25px;
+	border-top: 1px solid #e3e6e6;
+}
+ul.itemList li {
+	margin: 0;
+	padding: 9px 0;
+	background: none;
+	border-bottom: 1px solid #e3e6e6;
+	line-height: 120%;
+}
+ul.itemList li a {
+	color: #000;
+}
+ul.itemList li a:hover {
+	color: #ebbc00;
+}
+#newsListBox figure,
+#publicationsListBox figure {
+	margin: 0 0 15px;
+}
+#newsListBox .itemImgTxt,
+#publicationsListBox .itemImgTxt {
+	margin: 0 0 15px;
+}
+#newsListBox ul.itemList,
+#publicationsListBox ul.itemList {
+	clear: both;
+}
+/*---[ search ]-----------------------------------------------------------------------*/
+#searchDrugs:focus {
+	box-shadow: 0 0 10px #73b9ed;
+}
+#search {
+	/*background: #e4e4e4;*/
+	padding: 15px 20px;
+	margin: 0 0 25px;
+	position: relative;
+	border-bottom: 1px solid #e4e4e4;
+}
+#search input[type='text'],
+#search .tt-hint {
+	width: 100%;
+	padding: 9px 50px 9px 10px;
+}
+#search button {
+	background: transparent url('../images/b-search.png') no-repeat 50% 0;
+	width: 38px;
+	top: 16px;
+	right: 21px;
+	bottom: 16px;
+	position: absolute;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+#search button:hover {
+	background-position: 50% -38px;
+}
+#search button:before {
+	content: '';
+	background: #d6d6d6;
+	width: 1px;
+	top: 6px;
+	bottom: 6px;
+	left: 0;
+	position: absolute;
+}
+#search .typeahead {
+	background: #fff;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#search .tt-hint {
+	color: rgba(0,0,0,.3);
+}
+#search .tt-dropdown-menu {
+	width: 100%;
+	background: #fff;
+	color: rgba(0,0,0,.3);
+	box-shadow: 0 0 5px rgba(0,0,0,.17);
+	border: solid 1px rgba(160,160,160,.55);
+	border-top: 0 none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#search .tt-suggestion {
+	padding: 8px 10px;
+	font-family: 'OpenSansSemiBold';
+	font-size: 14px;
+	line-height: 110%;
+}
+#search .tt-suggestion + .tt-suggestion {
+	font-size: 14px;
+	border-top: 1px solid #f3f3f3;
+}
+#search .tt-suggestions .price {
+	float: right;
+	color: #fff;
+	margin: 0 0 0 15px;
+	background: #626262;
+	font-family: 'OpenSansSemiBold';
+	font-size: 11px;
+	padding: 2px 5px;
+	border-radius: 3px;
+}
+#search .tt-suggestions .price strong {
+	color: #fff;
+	font-family: 'OpenSansSemiBold';
+	font-size: 11px;
+}
+#search .tt-suggestions .name {
+	font-family: 'OpenSansSemiBold';
+	font-size: 14px;
+}
+#search .typeahead .tt-suggestion.tt-cursor {
+	color: #383838;
+	background: #f3f3f3;
+}
+#search .tt-dropdown-menu strong {
+	color: #383838;
+	font-weight: normal;
+}
+/*---[ home ]-----------------------------------------------------------------------*/
+#home {
+	background: #f6f6f6;
+	padding: 25px 20px;
+	margin: 0 0 20px;
+	height: 750px;
+	position: relative;
+}
+#home h1 {
+	color: #383838;
+	margin: 0 0 5px;
+	font-family: 'OpenSansSemiBold';
+	font-size: 34px;
+}
+#home .sub {
+	color: #7a7a7a;
+	margin: 0 0 35px;
+	font-family: 'OpenSansRegular';
+	font-size: 15px;
+	font-style: italic;
+}
+#home .tip {
+	position: absolute;
+	top: -7px;
+	right: 45px;
+}
+#home .tipBenefits {
+	position: absolute;
+	top: 554px;
+	left: 351px;
+}
+#home .tipArrows {
+	margin: 0 0 0 -95px;
+	background: transparent url('../images/img-arrows-big.png') no-repeat 50% 0;
+	width: 195px;
+	height: 275px;
+	position: absolute;
+	top: 185px;
+	left: 50%;
+}
+#home .box1,
+#home .box2,
+#home .box3 {
+	position: absolute;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#home .box1 h2,
+#home .box2 h2,
+#home .box3 h2 {
+	color: #717070;
+	font-family: 'FrancoisOneRegular';
+	font-size: 30px;
+	line-height: 86%;
+	letter-spacing: -2px;
+}
+#home .box1 p,
+#home .box2 p,
+#home .box3 p {
+	line-height: 128%;
+}
+#home .box1 {
+	width: 187px;
+	background: transparent url('../images/bg-home-box1.png') no-repeat 0 0;
+	padding: 170px 7px 0 40px;
+	position: absolute;
+	top: 123px;
+	left: 38px;
+}
+#home .box2 {
+	width: 166px;
+	background: transparent url('../images/bg-home-box2.png') no-repeat 0 0;
+	padding: 170px 0 0 20px;
+	position: absolute;
+	top: 207px;
+	right: 34px;
+}
+#home .box3 {
+	width: 205px;
+	background: transparent url('../images/bg-home-box3.png') no-repeat 0 0;
+	padding: 170px 0 0 50px;
+	position: absolute;
+	top: 444px;
+	left: 65px;
+}
+#home .benefits {
+	display: inline-block;
+	background: #383838;
+	color: #ffcc00;
+	padding: 10px 13px;
+	font-family: 'OpenSansSemiBold';
+	font-size: 14px;
+	text-transform: uppercase;
+	position: absolute;
+	top: 570px;
+	left: 440px;
+}
+#home ul {
+	margin: 0;
+}
+#home ul li {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	background: none;
+	color: #717070;
+	font-family: 'OpenSansRegular';
+	font-size: 14px;
+	text-transform: uppercase; 
+}
+#home ul li span {
+	display: block;
+	color: #383838;
+	font-family: 'OpenSansSemiBold';
+	font-size: 22px;
+}
+#home ul li.el1 {
+	top: 504px;
+	left: 289px;
+}
+#home ul li.el2 {
+	top: 693px;
+	left: 289px;
+}
+#home ul li.el3 {
+	top: 677px;
+	left: 453px;
+}
+/*---[ data tables ]-----------------------------------------------------------------------*/
+#dataTables table .name {
+	text-align: left;
+	width: 21%;
+}
+#dataTables table .contents,
+#dataTables table .substance,
+#dataTables table .level {
+	width: 17%;
+}
+#dataTables table .patient,
+#dataTables table .price {
+	width: 14%;
+}
+/*---[ drug Card ]-----------------------------------------------------------------------*/
+#drugCard h1 {
+	margin: 0 0 25px;
+}
+#drugCard .caption {
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	line-height: 165%;
+	text-align: right;
+	margin: 0 0 20px;
+}
+#drugCard .caption strong {
+	font-family: 'OpenSansSemiBold';
+	font-weight: normal;
+	display: block;
+}
+#drugCard .big {
+	font-family: 'OpenSansRegular';
+	font-size: 16px;
+	line-height: 150%;
+}
+#drugCard .sm {
+	margin: 15px 0;
+}
+.drugInfo {
+	border-bottom: 1px solid #e3e6e6;
+	margin: 0 0 20px;
+}
+.drugInfo ul {
+	margin: 0;
+}
+.drugInfo ul li {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: none;
+}
+.drugInfo ul li:nth-child(2n+1) {
+	background: #f7f7f7;
+}
+.drugInfo ul li a {
+	color: #d2a90e;
+}
+.drugInfo ul li a:hover {
+	color: #ffcc00;
+}
+.drugInfo ul li strong {
+	display: block;
+	width: 180px;
+	float: left;
+	padding: 10px 0 10px 8px;
+	font-weight: normal;
+}
+.drugInfo ul li span {
+	display: block;
+	padding: 10px 8px 10px 200px;
+}
+.priceList ul {
+	overflow: hidden;
+	margin: 0 0 10px;
+}
+.priceList ul li {
+	float: left;
+	width: 15%;
+	margin: 0 0 2% 2%;
+	padding: 0;
+	background: #383838;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.priceList ul li:first-child {
+	margin: 0 0 2%;
+	border: 1px solid #4f4f4f;
+}
+.priceList ul li a {
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+.priceList ul li a:before {
+	content: '';
+	background: #ffcc00;
+	position: absolute;
+	top: 100px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+.priceList ul li a:hover:before {
+	content: '';
+	background: #ffcc00;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.priceList ul li span {
+	display: block;
+	font-family: 'OpenSansRegular';
+	line-height: 100%;
+	color: #fff;
+	text-align: right;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+.priceList ul li a:hover span {
+	color: #383838;
+}
+.priceList ul li span.currency {
+	padding: 9px 8px 0;
+	font-size: 14px;
+}
+.priceList ul li:first-child span.currency {
+	padding: 8px 8px 0;
+}
+.priceList ul li span.cost {
+	padding: 7px 8px 10px;
+	font-family: 'OpenSansSemiBold';
+	font-size: 18px;
+}
+.priceList ul li:first-child span.cost {
+	text-align: center;
+	text-transform: uppercase;
+}
+.priceList ul li span.repayment {
+	padding: 7px 8px;
+	background: #ffcc00;
+	color: #383838;
+	font-size: 22px;
+	text-transform: uppercase;
+}
+.priceList ul li:first-child span.repayment {
+	padding: 7px 8px 6px;
+	text-align: center;
+	font-size: 11px;
+	line-height: 22px;
+}
+.priceList ul li span.repayment.small {
+	font-size: 18px;
+	line-height: 22px;
+}
+.priceList ul li.blank {
+	background: #c0c0c0;
+}
+.priceList ul li.blank span.repayment {
+	background: #d2d2d2;
+	color: #fff;
+}
+.repaymentDetails ul {
+	margin: 0;
+}
+.repaymentDetails ul li {
+	margin: 0 0 35px;
+	padding: 0;
+	background: none;
+}
+.repaymentDetails ul li .repayment {
+	overflow: hidden;
+	display: block;
+	float: left;
+	width: 95px;
+	height: 95px;
+	background: #383838;
+	font-family: 'OpenSansRegular';
+	line-height: 100%;
+	color: #fff;
+	text-align: center;
+	position: relative;
+}
+.repaymentDetails ul li .repayment span {
+	display: block;
+	text-align: center;
+}
+.repaymentDetails ul li .repayment .percent {
+	font-size: 18px;
+	position: absolute;
+	top: 9px;
+	right: 6px;
+}
+.repaymentDetails ul li .repayment .quantity {
+	font-family: 'OpenSansSemiBold';
+	font-size: 43px;
+	padding: 33px 0 20px;
+}
+.repaymentDetails ul li .repayment .small {
+	font-size: 10px;
+	text-transform: uppercase;
+}
+.repaymentDetails ul li .inner {
+	padding: 0 0 0 115px;
+}
+.repaymentDetails ul li h2 {
+	color: #000;
+	font-family: 'OpenSansSemiBold';
+	font-size: 16px;
+	margin: 0 0 10px;
+}
+.repaymentDetails ul li h2 span {
+	display: inline-block;
+	background: #f7c600;
+	padding: 3px 5px;
+}
+.repaymentDetails ul li p {
+	background: #f3f3f3;
+	margin: 0;
+	padding: 15px;
+}
+/*---[ recent changes ]-----------------------------------------------------------------------*/
+#recentChanges {
+	background: transparent url('../images/bg-recent-changes.jpg') no-repeat 0 0;
+	color: #383838;
+	height: 284px;
+	margin: 0 0 30px;
+	padding: 40px 20px 0 30px;
+	position: relative;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#recentChanges h1 {
+	font-family: 'RockSaltRegular';
+	font-size: 18px;
+	color: #383838;
+	margin: 0 0 20px;
+}
+#recentChanges ul {
+	margin: 0 0 20px 10px;
+}
+#recentChanges ul li {
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	margin: 0;
+	padding: 0 0 7px;
+	background: none;
+}
+#recentChanges ul li:before {
+	content: '- ';
+}
+#recentChanges a.more {
+	color: #383838;
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	position: absolute;
+	right: 52px;
+	bottom: 38px;
+}
+#recentChanges a.more:hover {
+	color: #000;
+}
+/*---[ replacements list ]-----------------------------------------------------------------------*/
+#replacementsList {
+	margin: 0 0 20px;
+}
+#replacementsList h1 {
+	font-family: 'OpenSansRegular';
+	font-size: 16px;
+	margin: 0;
+}
+#replacementsList h1 span {
+	display: inline-block;
+	background: #383838;
+	padding: 13px 8px;
+	color: #fff;
+}
+#replacementsList h1 span b {
+	font-weight: normal;
+	color: #ffcc00;
+}
+#replacementsList ul.list {
+	margin: 0 0 15px;
+	border-top: 1px solid #e3e6e6;
+}
+#replacementsList ul.list li {
+	border-bottom: 1px solid #e3e6e6;
+	padding: 10px 8px;
+	margin: 0;
+	background: #fff;
+}
+#replacementsList ul.list li:nth-child(2n+1) {
+	background: #f7f7f7;
+}
+/*---[ did you know ]-----------------------------------------------------------------------*/
+#didYouKnow {
+	background: #383838;
+	padding: 25px 20px;
+	color: #fff;
+	margin: 0 0 20px;
+	font-family: 'OpenSansRegular';
+	font-size: 14px;
+}
+#didYouKnow h1 {
+	color: #fff;
+	margin: 0 0 15px;
+	font-size: 34px;
+	line-height: 105%;
+	text-transform: uppercase;
+}
+#didYouKnow h2 {
+	color: #a0a0a0;
+	margin: 0 0 40px;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 105%;
+}
+#didYouKnow ul.list {
+	margin: 0 0 0 15px;
+}
+#didYouKnow ul.list li {
+	margin: 0 0 30px;
+	padding: 0 0 0 55px;
+	background: transparent url('../images/ico-arrow-white3.png') no-repeat 3px 3px;
+	text-transform: uppercase;
+}
+#didYouKnow ul.list li span {
+	color: #ffcc00;
+	font-family: 'OpenSansSemiBold';
+	font-size: 22px;
+}
+/*---[ modals ]-----------------------------------------------------------------------*/
+.modalBox {
+	position: relative;
+	background: #383838;
+	border: 1px solid #666667;
+	padding: 30px 40px;
+	width: auto;
+	max-width: 780px;
+	margin: 20px auto;
+	color: #dddddd;
+	font-family: 'OpenSansRegular';
+	font-size: 16px;
+	line-height: 1.5;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.mfp-close-btn-in .modalBox .mfp-close {
+	color: #fff;
+}
+.modalBox h1 {
+	font-family: 'FrancoisOneRegular';
+	font-size: 34px;
+	color: #fff;
+	margin: 0 0 20px;
+}
+.modalBox h1 span {
+	color: #ffcc00;
+}
+.modalBox h2 {
+	font-family: 'OpenSansSemiBold';
+	font-size: 22px;
+	color: #ffcc00;
+	text-transform: uppercase;
+	margin: 0 0 5px;
+}
+.modalBox p {
+	margin: 0 0 30px;
+}
+.modalBox strong {
+	color: #fff;
+}
+.modalBox a {
+	color: #54abd4;
+}
+.modalBox a:hover {
+	color: #79d4ff;
+}
+#infoHome .imgInfo {
+	text-align: center;
+	margin: 0 0 30px;
+}
+#infoHome .info {
+	font-family: 'OpenSansRegular';
+	font-size: 13px;
+	text-transform: uppercase;
+	float: left;
+	width: 420px;
+}
+#infoHome .elogin {
+	font-family: 'OpenSansRegular';
+	font-size: 14px;
+	font-style: italic;
+	line-height: 1.2;
+	color: #bebebe;
+	padding: 0 0 0 40px;
+	margin: 0 0 0 450px;
+	background: transparent url('../images/bg-elogin-vertical.png') no-repeat 0 0;
+}
+#infoHome .elogin img {
+	display: block;
+}
+#infoSearch .juxtaposition {
+	margin: 55px 0 35px;
+}
+#infoSearch .juxtaposition .left {
+	width: 280px;
+	float: left;
+	font-size: 14px;
+}
+#infoSearch .juxtaposition .center {
+	width: 120px;
+	float: left;
+	margin: 0 9px;
+	padding: 25px 0 0;
+}
+#infoSearch .juxtaposition .right {
+	width: 280px;
+	float: right;
+	font-size: 14px;
+}
+#infoSearch .juxtaposition .drug {
+	display: block;
+	background: #404040;
+	font-family: 'OpenSansSemiBold';
+	font-size: 14px;
+	color: #ffcc00;
+	padding: 10px 10px;
+	margin: 0 0 10px;
+}
+#infoSearch .juxtaposition .desc {
+	display: block;
+	padding: 0 10px;
+}
+#infoSearch .juxtaposition .circle {
+	display: block;
+	border-radius: 50%;
+	font-family: 'OpenSansSemiBold';
+	font-size: 18px;
+	color: #383838;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	margin: 0 auto;
+	position: relative;
+}
+#infoSearch .juxtaposition .circle.yellow {
+	background: #ffcc00;
+}
+#infoSearch .juxtaposition .circle.orange {
+	background: #ff8a00;
+}
+#infoSearch .juxtaposition .circle.red {
+	background: #ff0000;
+}
+#infoSearch .juxtaposition .info {
+	background: #383838;
+	border: 1px solid #4e4e4e;
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	line-height: 1.3;
+	color: #acabab;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px 0;
+	width: 118px;
+	margin: 0 0 0 -60px;
+	left: 50%;
+	position: absolute;
+	bottom: 45px;
+}
+#infoSearch .juxtaposition .info:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -4px;
+	left: 55px;
+	width: 6px;
+	height: 6px;
+	background: #383838;
+	border-left:1px solid #4e4e4e;
+	border-bottom:1px solid #4e4e4e;
+	-moz-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+}
+#infoSearch .links {
+	font-family: 'OpenSansRegular';
+	font-size: 13px;
+	text-transform: uppercase;
+	margin: 10px 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---[ modal - new feature drug interactions ]-----------------------------------------------------------------------*/
+.modalBox .buttonMockupWrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.modalBox .buttonMockup {
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	color: #2f2e2e;
+	letter-spacing: 1px;
+	border: 1px solid #383838;
+	display: inline-block;
+	text-transform: uppercase;
+	padding: 5px 10px 5px 25px;
+	box-shadow: 0 0 4px #a6a6a6;
+	background-color: #a6a6a6;
+	background-image: url("../images/ico-download-black.png");
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	margin-bottom: 30px;
+}
+
+.modalBox .tabsMockup {
+	background-image: url("../images/modal_tabs.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 100%;
+	height: 53px;
+	margin-bottom: 30px;
+}
+
+.modalBox .edycjalekuMockup {
+	background-image: url("../images/modal_edycjaleku.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 100%;
+	height: 53px;
+	margin-bottom: 40px;
+}
+
+
+@media screen and (max-width: 800px) {
+	.modalBox .tabsMockup, .modalBox .edycjalekuMockup {
+		background-size: contain; 
+	}
+
+}
+
+
+
+/*---[ notification ]-----------------------------------------------------------------------*/
+.notification {
+	font-family: 'OpenSansSemiBold';
+	font-size: 14px;
+	color: #393836;
+	background-color: #f6f4df;
+	border: 1px solid #f3efc6;
+	padding: 10px 55px 10px 15px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.notification .removeButton {
+	background-color: #696967;
+	background-image: url("../images/ico-remove.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 20px;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 12px;
+	right: 25px;
+	transition: background-color 150ms ease-in-out;
+
+}
+
+.notification .removeButton:hover {
+	background-color: #949494;
+	cursor: pointer;
+}
+
+
+
+/*---[ buttons new ]-----------------------------------------------------------------------*/
+
+
+.drugCardButtonsWrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+}
+
+.drugCardButtons {
+	display: flex;
+	white-space: nowrap;
+}
+
+.drugCardButtons .back2 a span {
+	background-image: url("../images/ico-home-black.png");
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	border-radius: 2px;
+	margin-right: 10px;
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	text-transform: uppercase;
+	border: 1px solid #c9c9c9;
+	background-color: #f3f3f3;
+	color: #383838;
+	padding: 6px 12px 6px 28px;
+	transition: box-shadow 150ms ease-in-out;
+}
+
+.drugCardButtons .back2 a span:hover {
+	border: 1px solid #73b8ee;
+	box-shadow: 0 0 10px #73b9ed;
+}
+
+
+
+.drugCardButtons .alternatives a span {
+	background-image: url("../images/ico-transfer-black.png");
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	border-radius: 2px;
+	margin-right: 10px;
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	text-transform: uppercase;
+	border: 1px solid #c9c9c9;
+	background-color: #f3f3f3;
+	color: #383838;
+	padding: 6px 12px 6px 28px;
+	transition: box-shadow 150ms ease-in-out;
+}
+
+.drugCardButtons .alternatives a span:hover {
+	border: 1px solid #73b8ee;
+	box-shadow: 0 0 10px #73b9ed;
+}
+
+
+.drugCardButtons .addToStorage a span {
+	background-image: url("../images/ico-download-black.png");
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	border-radius: 2px;
+	margin-right: 10px;
+	font-family: 'OpenSansRegular';
+	font-size: 12px;
+	text-transform: uppercase;
+	border: 1px solid #c9c9c9;
+	background-color: #f3f3f3;
+	color: #383838;
+	padding: 6px 12px 6px 28px;
+	transition: box-shadow 150ms ease-in-out;
+}
+.drugCardButtons .addToStorage a span:hover {
+	border: 1px solid #73b8ee;
+	box-shadow: 0 0 10px #73b9ed;
+}
+
+
+
+.drugCardLabels {
+}
+
+.drugCardLabels ul {
+	display: flex;
+	align-items: center;
+}
+
+.drugCardLabels ul li {
+	font-family: 'OpenSansSemiBold';
+	font-size: 11px;
+	border-radius: 3px;
+	margin: 0 0 0 5px;
+	padding: 2px 8px 2px 13px;
+	background: #ffcc00 url("../images/ico-point-small.png") no-repeat 7px center;
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+
+	.drugCardButtonsWrapper {
+		flex-flow: column;
+	}
+
+	.drugCardLabels ul li {
+		font-family: 'OpenSansSemiBold';
+		font-size: 11px;
+		border-radius: 3px;
+		margin: 0 5px 0 0;
+		padding: 2px 8px 2px 13px;
+		background: #ffcc00 url("../images/ico-point-small.png") no-repeat 7px center;
+	}
+
+	.drugCardLabels {
+		margin-top: 30px;
+	}
+
+	.drugCardLabels ul {
+		margin: 0;
+	}
+
+}
+
+@media screen and (max-width: 460px) {
+
+
+	.drugCardButtons {
+		flex-flow: column;
+	}
+
+	.drugCardButtons div {
+		margin-top: 20px;
+	}
+
+}
+
+
+/*---[ tabs ]-----------------------------------------------------------------------*/
+.searchInteractionTabs {
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.searchInteractionTabs .tab {
+	font-family: 'OpenSansSemiBold';
+	font-size: 14px;
+	color: #393836;
+	display: inline-block;
+	padding: 13px 15px 10px 15px;
+}
+
+.searchInteractionTabs .tab-inactive {
+	background-color: #f1f1f1;
+}
+
+.searchInteractionTabs .tab-active {
+	background-color: white;
+	border-top: 1px solid #e4e4e4;
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+	position: relative;
+	top: 1px;
+}
+
+
+
+
+
+/*---[ #drugInteractions ]-----------------------------------------------------------------------*/
+
+#drugInteractions {
+	padding-top: 30px;
+}
+
+#drugInteractions p {
+	margin-top: 30px;
+	font-family: 'OpenSansRegular';
+	font-size: 16px;
+	line-height: 150%;
+}
+
+#threeDrugs {
+	margin-left: 20px;
+}
+
+.drugForm::before {
+	content: "-";
+	color: white;
+	display: inline-block;
+	box-sizing: border-box;
+	border-radius: 30px;
+	background-color: #c2c2c2;
+	text-align: center;
+	font-family: 'OpenSansRegular';
+	font-size: 14px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 3px;
+}
+
+.drugForm:nth-of-type(1)::before {
+	content: "1";
+}
+
+.drugForm:nth-of-type(2)::before {
+	content: "2";
+}
+.drugForm:nth-of-type(3)::before {
+	content: "3";
+}
+
+.drugForm {
+	margin-top: 20px;
+	display: flex;
+	height: 35px;
+}
+
+.drugForm input {
+	border: 0;
+	font-family: 'OpenSansRegular';
+	font-size: 14px;
+	line-height: 150%;
+	margin-left: 10px;
+	width: 100%;
+	max-width: 345px;
+	box-sizing: border-box;
+}
+
+.drugForm input:focus {
+	box-shadow: 0 0 10px #73b9ed;
+}
+
+@-moz-document url-prefix() {
+	.drugForm input:focus {
+		outline: 1px solid #73b9ed;
+	}
+}
+
+
+.drugForm button[type="submit"] {
+	background-color: #363a39;
+	background-image: url("../images/ico-tick-yellow.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 20px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	box-sizing: border-box;
+	margin-left: 10px;
+	transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+	margin-top: 2px;
+	display: none;
+}
+
+.drugForm button[type="submit"]:hover {
+	background-color: #4d4d4d;
+	box-shadow: 0 0 5px #4d4d4d;
+}
+
+.drugForm button[type="reset"] {
+	background-color: #ffcc00;
+	background-image: url("../images/ico-cross-black.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 20px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	box-sizing: border-box;
+	margin-left: 5px;
+	transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+	margin-top: 2px;
+	display: none;
+}
+
+
+.drugForm button[type="reset"]:hover {
+	background-color: #ffd83d;
+	box-shadow: 0 0 6px #ffcc00;
+}
+
+
+
+#drugInteractions .checkInteractionTitleWrapper {
+	border-bottom: 1px solid #e5e5e5;
+	display: block;
+	width: 100%;
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+}
+
+#drugInteractions h2 {
+	background-color: #383838;
+	color: white;
+	display: inline-block;
+	font-size: 16px;
+	font-family: 'OpenSansRegular';
+	text-transform: uppercase;
+	padding: 20px 30px 20px 30px;
+	text-align: center;
+	margin: 0;
+}
+
+
+
+
+
+.interactionVisualized {
+	line-height: 1;
+	border-bottom: 1px solid #e4e6e5;
+	padding-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.interactionVisualized .row1 {
+	margin-top: 40px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+
+.interactionVisualized .row2 {
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.interactionVisualized .row3 {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+
+
+
+.interactionVisualized .firstDrug {
+
+}
+
+.interactionVisualized .secondDrug {
+	width: 100%;
+	max-width: 210px;
+	text-align: right;
+}
+
+.interactionVisualized .thirdDrug {
+	width: 100%;
+	max-width: 210px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.interactionVisualized .drugTitle {
+	font-family: 'OpenSansSemiBold';
+	font-size: 34px;
+	color: #383838;
+	hyphens: auto;
+	word-wrap: break-word;
+}
+
+.interactionVisualized .drugSubstance {
+	font-family: 'OpenSansRegular';
+	color: #939393;
+	font-size: 13px;
+	margin-top: 5px;
+	line-height: 1.2;
+}
+
+.interactionVisualized .drugSubstance strong {
+	color: #373737;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.interactionVisualized .leftInteractionWrapper {
+	background-image: url("../images/interaction-left.png");
+	background-repeat: no-repeat;
+	background-position: calc(100% - 30px) center;
+	width: 50%;
+	height: 125px;
+	text-align: right;
+}
+
+.interactionVisualized .leftBrighterInteraction {
+	background-image: url("../images/interaction-left-lighter.png");
+}
+
+
+.interactionVisualized .leftInteractionWrapper .markerWrapper {
+	display: inline-block;
+	margin-top: 40px;
+	margin-right: 90px;
+}
+
+.interactionVisualized .leftInteractionWrapper .markerWrapper .marker {
+	font-family: 'OpenSansSemiBold';
+	color: white;
+	text-align: center;
+}
+
+.interactionVisualized .leftInteractionWrapper .descriptionWrapper {
+	display: inline-block;
+	margin-right: 7px;
+}
+
+.interactionVisualized .leftInteractionWrapper .description {
+	box-sizing: border-box;
+	background-color: white;
+	font-family: 'OpenSansRegular';
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-size: 12px;
+	border: 1px solid #e4e6e5;
+	text-align: center;
+	padding: 10px 15px 9px 15px;
+	color: #aaaaaa;
+	width: 100%;
+	max-width: 130px;
+	position: relative;
+	top: 5px;
+}
+
+
+.interactionVisualized .leftInteractionWrapper .description::before {
+	background-image: url("../images/interactionArrow_right.png");
+	background-repeat: no-repeat;
+	background-position: right center;
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: -7px;
+}
+
+
+
+
+
+
+
+
+.interactionVisualized .rightInteractionWrapper {
+	background-image: url("../images/interaction-right.png");
+	background-repeat: no-repeat;
+	background-position: 30px center;
+	width: 50%;
+	height: 125px;
+}
+
+.interactionVisualized .rightBrighterInteraction {
+	background-image: url("../images/interaction-right-lighter.png");
+}
+
+
+.interactionVisualized .rightInteractionWrapper .markerWrapper {
+	display: inline-block;
+	margin-top: 40px;
+	margin-left: 90px;
+}
+
+
+.interactionVisualized .rightInteractionWrapper .markerWrapper .marker {
+	font-family: 'OpenSansSemiBold';
+	color: white;
+	text-align: center;
+}
+
+
+.interactionVisualized .rightInteractionWrapper .descriptionWrapper {
+	display: inline-block;
+	margin-left: 7px;
+}
+
+.interactionVisualized .rightInteractionWrapper .description {
+	box-sizing: border-box;
+	background-color: white;
+	font-family: 'OpenSansRegular';
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-size: 12px;
+	border: 1px solid #e4e6e5;
+	text-align: center;
+	padding: 10px 15px 9px 15px;
+	color: #aaaaaa;
+	width: 100%;
+	max-width: 130px;
+	position: relative;
+	top: 5px;
+}
+
+
+.interactionVisualized .rightInteractionWrapper .description::before {
+	background-image: url("../images/interactionArrow_left.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: -7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.interactionVisualized .bottomInteractionWrapper {
+	display: block;
+	background-image: url("../images/interaction-bottom.png");
+	background-repeat: no-repeat;
+	background-position: center 15px;
+	min-width: 140px;
+}
+
+.interactionVisualized .bottomBrighterInteraction {
+	background-image: url("../images/interaction-bottom-lighter.png");
+}
+
+.interactionVisualized .bottomInteractionWrapper .marker {
+	margin: 0 auto;
+	margin-top: 40px;
+	font-family: 'OpenSansSemiBold';
+	color: white;
+	text-align: center;
+}
+
+.interactionVisualized .bottomInteractionWrapper .description {
+	box-sizing: border-box;
+	background-color: white;
+	font-family: 'OpenSansRegular';
+	line-height: 1.2;
+	text-transform: uppercase;
+	font-size: 12px;
+	border: 1px solid #e4e6e5;
+	text-align: center;
+	padding: 13px 5px 12px 5px;
+	color: #aaaaaa;
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 100%;
+	max-width: 130px;
+	position: relative;
+}
+
+
+.interactionVisualized .bottomInteractionWrapper .description::before {
+	background-image: url("../images/interactionArrow_top.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 17px;
+	top: -12px;
+	left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.interactionVisualized .greenInteraction {
+	width: 35px;
+	height: 35px;
+	border-radius: 0;
+	line-height: 30px;
+	font-size: 35px;
+	background-color: #5ee048;
+}
+
+.interactionVisualized .yellowInteraction {
+	width: 30px;
+	height: 30px;
+	border-radius: 35px;
+	line-height: 30px;
+	font-size: 19px;
+	background-color: #ffcc00;
+}
+
+.interactionVisualized .orangeInteraction {
+	width: 35px;
+	height: 35px;
+	border-radius: 40px;
+	line-height: 35px;
+	font-size: 19px;
+	background-color: #ff8a00;
+}
+
+.interactionVisualized .redInteraction {
+	width: 40px;
+	height: 40px;
+	border-radius: 45px;
+	line-height: 40px;
+	font-size: 19px;
+	background-color: #ff0000;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+
+	.interactionVisualized .drugTitle {
+		font-size: 30px;
+		margin-top: 10px;
+	}
+
+
+
+	.interactionVisualized .row1 {
+		margin-bottom: 10px;
+	}
+
+
+	.interactionVisualized .row2 {
+		margin-bottom: 0;
+	}
+
+	.interactionVisualized .leftInteractionWrapper {
+		background-position: calc(100% - 10px) center;
+	}
+
+
+	.interactionVisualized .rightInteractionWrapper {
+		background-position: 10px center;
+	}
+
+
+	.interactionVisualized .leftInteractionWrapper .description {
+		font-size: 11px;
+	}
+	.interactionVisualized .rightInteractionWrapper .description {
+		font-size: 11px;
+	}
+	.interactionVisualized .bottomInteractionWrapper .description {
+		font-size: 11px;
+	}
+
+	.interactionVisualized .bottomInteractionWrapper {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+
+
+	.interactionVisualized .leftInteractionWrapper .markerWrapper {
+		margin-right: 65px;
+	}
+
+	.interactionVisualized .rightInteractionWrapper .markerWrapper {
+		margin-left: 65px;
+	}
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+	#drugInteractions {
+		padding-bottom: 50px;
+	}
+
+
+	.interactionVisualized .row1 {
+		margin-bottom: 20px;
+	}
+
+	.interactionVisualized .row2 {
+		margin-bottom: 0;
+	}
+
+	.interactionVisualized .row3 {
+		justify-content: center;
+	}
+
+	.interactionVisualized .drugTitle {
+		font-size: 20px;
+	}
+
+
+	.interactionVisualized .drugSubstance {
+		font-size: 11px;
+	}
+
+	.interactionVisualized .bottomInteractionWrapper {
+		background-position: center top;
+		background-size: 100px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.interactionVisualized .leftInteractionWrapper {
+		background-position: right center;
+		background-size: 49px;
+		height: 80px;
+	}
+	.interactionVisualized .rightInteractionWrapper {
+		background-position: left center;
+		background-size: 49px;
+		height: 80px;
+	}
+
+	.interactionVisualized .leftInteractionWrapper .markerWrapper {
+		margin-right: 40px;
+		margin-top: 20px;
+	}
+	.interactionVisualized .bottomInteractionWrapper .marker {
+		margin-top: 25px;
+	}
+
+	.interactionVisualized .rightInteractionWrapper .markerWrapper {
+		margin-left: 40px;
+		margin-top: 20px;
+	}
+
+
+
+	.interactionVisualized .leftInteractionWrapper .description {
+		top: 0;
+		padding: 8px;
+		font-size: 8px;
+		max-width: 100px;
+	}
+	.interactionVisualized .rightInteractionWrapper .description {
+		top: 0;
+		padding: 8px;
+		font-size: 8px;
+		max-width: 100px;
+	}
+	.interactionVisualized .bottomInteractionWrapper .description {
+		padding: 8px;
+		font-size: 8px;
+	}
+
+
+
+
+	.interactionVisualized .greenInteraction {
+		width: 25px;
+		height: 25px;
+		border-radius: 0;
+		line-height: 25px;
+		font-size: 20px;
+		background-color: #5ee048;
+	}
+
+	.interactionVisualized .yellowInteraction {
+		width: 20px;
+		height: 20px;
+		border-radius: 35px;
+		line-height: 20px;
+		font-size: 16px;
+		background-color: #ffcc00;
+	}
+
+	.interactionVisualized .orangeInteraction {
+		width: 25px;
+		height: 25px;
+		border-radius: 40px;
+		line-height: 25px;
+		font-size: 16px;
+		background-color: #ff8a00;
+	}
+
+	.interactionVisualized .redInteraction {
+		width: 30px;
+		height: 30px;
+		border-radius: 45px;
+		line-height: 30px;
+		font-size: 16px;
+		background-color: #ff0000;
+	}
+
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 640px) {
+
+	#threeDrugs {
+		margin-left: 0;
+	}
+
+	.drugForm {
+		margin-top: 20px;
+		margin-right: 10px;
+		height: 80px;
+		position: relative;
+	}
+
+	.drugForm span {
+		position: absolute;
+		top: 45px;
+		left: 40px;
+	}
+
+	.drugForm::before {
+		margin-bottom: 20px;
+		margin-left: 10px;
+	}
+
+	.drugForm input {
+		width: 70%;
+		height: 35px;
+	}
+
+
+
+}
+
+@media screen and (max-width: 480px) {
+
+
+
+
+
+	.interactionVisualized .drugTitle {
+		font-size: 15px;
+	}
+
+
+
+	.interactionVisualized .leftInteractionWrapper .description {
+		font-size: 6px;
+	}
+	.interactionVisualized .rightInteractionWrapper .description {
+		font-size: 6px;
+	}
+	.interactionVisualized .bottomInteractionWrapper .description {
+		font-size: 6px;
+	}
+
+
+
+	.interactionVisualized .leftInteractionWrapper .markerWrapper {
+		margin-right: 30px;
+	}
+
+	.interactionVisualized .rightInteractionWrapper .markerWrapper {
+		margin-left: 30px;
+	}
+
+	.interactionVisualized .greenInteraction {
+		width: 15px;
+		height: 15px;
+		border-radius: 0;
+		line-height: 15px;
+		font-size: 20px;
+		background-color: #5ee048;
+	}
+
+	.interactionVisualized .yellowInteraction {
+		width: 10px;
+		height: 10px;
+		border-radius: 35px;
+		line-height: 10px;
+		font-size: 14px;
+		background-color: #ffcc00;
+	}
+
+	.interactionVisualized .orangeInteraction {
+		width: 15px;
+		height: 15px;
+		border-radius: 40px;
+		line-height: 15px;
+		font-size: 14px;
+		background-color: #ff8a00;
+	}
+
+	.interactionVisualized .redInteraction {
+		width: 20px;
+		height: 20px;
+		border-radius: 45px;
+		line-height: 20px;
+		font-size: 14px;
+		background-color: #ff0000;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---[ aside 2 ]-----------------------------------------------------------------------*/
+
+#storage {
+	border: 1px solid #e4e4e4;
+	margin-bottom: 15px;
+}
+
+#storage h1 {
+	background-color: #f1f1f1;
+	border-bottom: 1px solid #e4e4e4;
+	font-family: 'OpenSansSemiBold';
+	font-size: 14px;
+	padding: 15px 0 15px 20px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+
+#storage h1:after {
+	display: inline-block;
+	margin-left: 10px;
+	content: " ";
+	width: 11px;
+	height: 11px;
+	background-image: url("../images/ico-download-black.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+#storage ul {
+	list-style-type: none;
+}
+
+#storage li {
+	background: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-right: 30px;
+	position: relative;
+
+}
+
+#storage .removeButton {
+	background-color: #696967;
+	background-image: url("../images/ico-remove.png");
+	background-repeat: no-repeat;
+	background-position: 50%;
+	border-radius: 20px;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 20px;
+	transition: background-color 150ms ease-in-out;
+}
+
+#storage .removeButton:hover {
+	background-color: #949494;
+	cursor: pointer;
+}
+
+#storage a {
+	font-family: 'OpenSansRegular';
+	font-size: 13px;
+	background-color: #f3f3f3;
+	border: 1px solid #c9c9c9;
+	border-radius: 1px;
+	padding: 5px 10px 5px 25px;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	color: #383838;
+	display: inline-block;
+	background-image: url("../images/ico-arrow-right-black.png");
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	margin-top: 5px;
+	transition: background-color 150ms ease-in-out;
+}
+
+#storage a:hover {
+	background-color: #f4bd00;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---[ form ]-----------------------------------------------------------------------*/
+ul.form {
+	margin: 0 0 25px;
+}
+ul.form > li {
+	margin: 0 0 10px;
+	padding: 0;
+	background: none;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ul.form > li .col3,
+ul.form > li .col4 {
+	padding: 0;
+}
+ul.form > li .col4 {
+	margin: 0 0 0 15px;
+}
+ul.form > li > label {
+	color: #010101;
+	font-size: 14px;
+	display: block;
+	margin: 0 0 3px;
+}
+ul.form > li input[type='text'],
+ul.form > li select,
+ul.form > li textarea {
+	width: 100%;
+	width: calc(100% - 8px);
+}
+ul.form > li #fName {
+	width: 160px;
+}
+ul.form > li input[type='password']:focus,
+ul.form > li input[type='text']:focus,
+ul.form > li select:focus,
+ul.form > li textarea:focus {
+	box-shadow: 0 0 0 4px rgba(196,5,113,.1);
+}
+ul.form > li.submit {
+	margin: 15px 0 0;
+}
+ul.form > li input[type='text'].error,
+ul.form > li select.error,
+ul.form > li textarea.error {
+	border-color: #f1d6d6;
+	background: #fff5f5;
+	box-shadow: 0 0 0 4px rgba(196,5,5,.1);
+	color: #950000;
+}
+ul.form > li input[disabled] {
+	background-color: #f7f7f7;
+}
+ul.form > li ul {
+	margin: 0;
+	padding: 0;
+}
+ul.form > li ul li {
+	background: none;
+	margin: 0 0 5px;
+	padding: 0;
+}
+/*---[ pagination ]-----------------------------------------------------------------------*/
+.pagination {
+	clear: both;
+	overflow: hidden;
+	margin: 30px 0 0;
+	text-align: center;
+	line-height: 30px;
+}
+.pagination .pages {
+	display: inline-block;
+	vertical-align: middle;
+}
+.pagination .pages ol {
+	list-style: none;
+	display: inline;
+	margin: 0;
+}
+.pagination .pages ol li {
+	height: 30px;
+	width: 30px;
+	color: #000;
+	line-height: 30px;
+	display: block;
+	font-family: 'OpenSansSemiBold';
+	font-size: 14px;
+	float: left;
+	text-align: center;
+	margin: 0;
+}
+.pagination .pages ol li.active {
+	background: #ffcc00;
+	color: #fff;
+}
+.pagination .pages ol li a {
+	display: block;
+	color: #000;
+	height: 30px;
+	width: 30px;
+	background: #fff;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+.pagination .pages ol li a:hover {
+	color: #ffcc00;
+}
+.pagination .pages ol li.prev a,
+.pagination .pages ol li.next a,
+.pagination .pages ol li.prevPrev a,
+.pagination .pages ol li.nextNext a {
+	text-indent: -9999px;
+	background: transparent url('../images/btn-pagination.png') no-repeat;
+}
+.pagination .pages ol li.prev a {
+	background-position: 0 0;
+}
+.pagination .pages ol li.prev a:hover {
+	background-position: -30px 0;
+}
+.pagination .pages ol li.next a {
+	background-position: -30px -30px;
+}
+.pagination .pages ol li.next a:hover {
+	background-position: 0 -30px;
+}
+.pagination .pages ol li.prevPrev a {
+	background-position: 0 -60px;
+}
+.pagination .pages ol li.prevPrev a:hover {
+	background-position: -30px -60px;
+}
+.pagination .pages ol li.nextNext a {
+	background-position: -30px -90px;
+}
+.pagination .pages ol li.nextNext a:hover {
+	background-position: 0 -90px;
+}
+/*---[ footer ]-----------------------------------------------------------------------*/
+#footer {
+	border-top: 3px solid #e3e6e6;
+	padding: 15px 0;
+	margin: 30px 0 0;
+	clear: both;
+	color: #000;
+	overflow: hidden;
+}
+#footer p {
+	margin: 0;
+}
+#footer .copy {
+	float: left;
+}
+#footer .create {
+	display: block;
+	color: #9b9b9b;
+}
+#footer .create span {
+	margin: 0 10px;
+}
+#footer .create a {
+	margin: 0 8px 0 0;
+	color: #da8d00;
+}
+#footer .create a:hover {
+	color: #ffcc00;
+}
+#footer .honcode {
+	float: right;
+	background: transparent url('../images/honcode.jpg') no-repeat 0 50%;
+	padding: 3px 0 3px 40px;
+	color: #9b9b9b;
+	font-size: 13px;
+	line-height: 123%
+}
+/*-------------------------------------------------------------------------------------------*/
+/*---[ rwd ]---------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 980px) {
+	h1, .h1 {
+		font-size: 29px;
+	}
+	.itemMain h2 {
+		font-size: 17px;
+	}
+	#top, 
+	#menu {
+		background-image: none;
+	}
+	#home {
+		height: auto;
+	}
+	#home .tip,
+	#home .tipBenefits {
+		display: none;
+	}
+	#home .benefits {
+		margin: 690px 0 0;
+		font-size: 22px;
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+	#home ul li {
+		margin: 30px 0 0;
+		font-size: 22px;
+	}
+	#home ul li.el1,
+	#home ul li.el2,
+	#home ul li.el3 {
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+	#home ul li span {
+		display: inline;
+		margin: 0;
+		font-size: 33px;
+	}
+}
+@media screen and (max-width: 900px) {
+	.wh a.btnMore {
+		position: relative;
+		right: auto;
+		top: auto;
+	}
+	ul.itemList {
+		margin: 0 0 10px;
+	}
+	.itemListBox {
+		margin: 0 0 20px;
+	}
+	#home .tipArrows {
+		background: transparent url('../images/img-arrows-small.png') no-repeat 50% 0;
+		height: 318px;
+		top: 162px;
+	}
+	#home .box3 {
+		top: 470px;
+	}
+	#recentChanges {
+		background: #fce87b;
+		height: auto;
+		margin: 0 0 30px;
+		padding: 30px 20px 20px 20px;
+	}
+	#recentChanges a.more {
+		position: relative;
+		right: auto;
+		bottom: auto;
+	}
+}
+@media screen and (max-width: 800px) {
+	#topNav {
+		display: none;
+	}
+	#logo {
+		width: 60%;
+	}
+	#logo img {
+		width: 100%;
+	}
+	#rwd {
+		display: block;
+		margin: 30px 0 0;
+	}
+	#searchBox {
+		display: none;
+		clear: both;
+		float: none;
+		border: 1px solid #c7cece;
+		background: #fff;
+		box-shadow: 0 0 0 4px #f5f5f5;
+		margin: 25px 4px;
+		border-radius: 2px;
+		position: relative;
+	}
+	#searchBox input {
+		float: none;
+		border: 0 none;
+		background: #fff;
+		box-shadow: none;
+		margin: 0;
+		width: 332px;
+	}
+	#searchBox button {
+		float: none;
+
+		width: 37px;
+		height: 32px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+	}
+	#searchBox button:hover {
+		background-color: #383838;
+	}
+	#menu {
+		display: none;
+		clear: both;
+		height: auto;
+		margin: 0;
+		background: #383838;
+	}
+	#menu > ul > li {
+		float: none;
+		border-bottom: 1px solid #4a4a4a;
+	}
+	#menu > ul > li > a {
+		display: block;
+		height: auto;
+		font-size: 14px;
+		line-height: 110%;
+		padding: 9px 12px;
+	}
+	#menu > ul > li > a > span {
+		padding: 0;
+		display: block;
+	}
+	#menu > ul > li > ul {
+		display: none;
+		margin: 0;
+		padding: 0;
+		border: 0 none;
+		background: #f7f7f7;
+		width: auto;
+		position: relative;
+		top: auto;
+		left: auto;
+		box-shadow:  none;
+	}
+	#menu > ul > li > ul:before {
+		content: '';
+		display: none;
+	}
+	#menu > ul > li > ul > li > a {
+		padding: 6px 12px;
+	}
+	#menuSub {
+		display: none;
+		background: #e3e2e2;
+	}
+	#menuSub ul li {
+		float: none;
+		margin: 0;
+		border-bottom: 1px solid #d2d2d2;
+	}
+	#menuSub ul li a {
+		display: block;
+		font-family: 'OpenSansSemiBold';
+		font-size: 14px;
+		line-height: 110%;
+		padding: 9px 12px;
+		text-transform: none;
+	}
+	#menuSub ul li a:hover {
+		color: #323a3f;
+		background: #fff5cc;
+	}
+	.esculapAd,
+	.downloadMaterials {
+		display: none;
+	}
+	.col1,
+	.col2,
+	.col3,
+	.col4,
+	.col5,
+	.col6,
+	.col7,
+	.col8,
+	.col9,
+	.col10,
+	.col11,
+	.col12 {
+		width: 100%;
+	}
+	.heading {
+		padding: 0;
+	}
+	.square {
+		overflow: hidden;
+	}
+	.itemMain {
+		overflow: hidden;
+	}
+	.itemMain .img {
+		float: left;
+		width: 35%;
+		margin: 0 20px 5px 0;
+	}
+	.itemImgTxt .img,
+	#newsListBox figure,
+	#publicationsListBox figure {
+		width: 20%;
+		margin: 0 20px 5px 0;
+	}
+	.itemImgTxt .inner {
+		padding: 0;
+	}
+	.drugInfo ul li {
+		padding: 10px 8px;
+	}
+	.drugInfo ul li strong {
+		font-weight: bold;
+		display: block;
+		width: auto;
+		float: none;
+		padding: 0;
+		margin: 0 0 5px;
+	}
+	.drugInfo ul li span {
+		display: block;
+		padding: 0;
+	}
+	#home .tipArrows {
+		background: transparent url('../images/img-arrows-big.png') no-repeat 50% 0;
+		height: 275px;
+		top: 185px;
+	}
+	#home .box3 {
+		top: 444px;
+	}
+	#footer {
+		text-align: center;
+	}
+	#footer p {
+		margin: 5px 0;
+		text-align: center;
+	}
+	#footer .copy {
+		float: none;
+	}
+	#footer .create {
+		display: block;
+		color: #9b9b9b;
+	}
+	#footer .create span {
+		display: block;
+		height: 1px;
+		background: #e3e6e6;
+		overflow: hidden;
+		margin: 15px 0;
+	}
+	#footer .create a {
+		margin: 0 8px 0 0;
+	}
+	#footer .honcode {
+		margin: 15px 0 0;
+		float: none;
+		background: transparent url('../images/honcode.jpg') no-repeat 50% bottom;
+		padding: 15px 0 45px;
+		border-top: 1px solid #e3e6e6;
+		text-align: center;
+	}
+	#infoHome .info {
+		float: none;
+		width: auto;
+	}
+	#infoHome .elogin {
+		padding: 31px 0 0;
+		margin: 30px 0 0 ;
+		background: transparent url('../images/bg-elogin-horizontal.png') no-repeat 0 0;
+	}
+
+
+
+	.modalBox {
+		padding: 20px 10px;
+	}
+	#infoSearch .juxtaposition {
+		margin: 35px 0;
+	}
+	#infoSearch .juxtaposition .left {
+		width: auto;
+		float: none;
+		text-align: center;
+	}
+	#infoSearch .juxtaposition .center {
+		width: auto;
+		float: none;
+		padding: 0;
+		margin: 40px 0;
+	}
+	#infoSearch .juxtaposition .right {
+		width: auto;
+		float: none;
+		text-align: center;
+	}
+	#infoSearch .juxtaposition .info {
+		background: #383838;
+		border: 1px solid #4e4e4e;
+		font-family: 'OpenSansRegular';
+		font-size: 12px;
+		line-height: 1.3;
+		color: #acabab;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 10px 0;
+		width: 118px;
+		margin: -27px 0 0;
+		top: 50%;
+		position: absolute;
+		left: 45px;
+		bottom: auto;
+	}
+	#infoSearch .juxtaposition .info:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: auto;
+		top: 23px;
+		left: -4px;
+		width: 6px;
+		height: 6px;
+		background: #383838;
+		-moz-transform:rotate(45deg);
+		-webkit-transform:rotate(45deg);
+	}
+}
+@media screen and (max-width: 768px) {
+	
+}
+@media screen and (max-width: 640px) {
+	#rwd {
+		font-size: 30px;
+		margin: 25px 0 0;
+	}
+	#home .tipArrows {
+		background: transparent url('../images/img-arrows-small.png') no-repeat 50% 0;
+		height: 318px;
+		top: 162px;
+	}
+	#home .box3 {
+		top: 470px;
+	}
+	.priceList ul li {
+		width: 30%;
+		margin: 0 0 3% 3%;
+	}
+	.priceList ul li:nth-child(3n+1) {
+		margin: 0 0 3%;
+	}
+}
+@media screen and (max-width: 520px) {
+	#home .tipArrows {
+		display: none;
+	}
+	#home .box1,
+	#home .box2,
+	#home .box3 {
+		position: relative;
+	}
+	#home .box1 {
+		width: auto;
+		background: none;
+		padding: 0;
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+	#home .box2 {
+		width: auto;
+		background: none;
+		padding: 0;
+		position: relative;
+		top: auto;
+		right: auto;
+	}
+	#home .box3 {
+		width: auto;
+		background: none;
+		padding: 0;
+		position: relative;
+		top: auto;
+		left: auto;
+	}
+	#home .box1 p,
+	#home .box2 p,
+	#home .box3 p {
+		margin: 0 0 30px
+	}
+	#home .benefits {
+		margin: 0;
+	}
+}
+@media screen and (max-width: 480px) {
+	#logo {
+		width: 50%;
+	}
+	#rwd {
+		font-size: 25px;
+		margin: 20px 0 0;
+	}
+	#home ul li {
+		margin: 20px 0 0;
+		font-size: 14px;
+	}
+	#home ul li span {
+		font-size: 22px;
+	}
+	.priceList ul li {
+		width: 48%;
+		margin: 0 0 4% 4%;
+	}
+	.priceList ul li:nth-child(3n+1) {
+		margin: 0 0 4% 4%;
+	}
+	.priceList ul li:nth-child(2n+1) {
+		margin: 0 0 4%;
+	}
+	.repaymentDetails ul li .repayment {
+		float: none;
+		width: auto;
+		margin: 0 0 15px;
+	}
+	.repaymentDetails ul li .inner {
+		padding: 0;
+	}
+	#didYouKnow h1 {
+		font-size: 12px;
+	}
+	#didYouKnow h1 {
+		font-size: 28px;
+	}
+	#didYouKnow h2 {
+		font-size: 14px;
+	}
+	#didYouKnow ul.list li span {
+		font-size: 16px;
+	}
+}
